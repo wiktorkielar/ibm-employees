@@ -1,5 +1,5 @@
-FROM openjdk:17-alpine
+FROM openjdk:17
 LABEL maintainer="wiktorkielar@gmail.com"
-ADD target/employees-0.0.1-SNAPSHOT.jar employees.jar
+ADD target/employees-*.jar employees.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "employees.jar"]

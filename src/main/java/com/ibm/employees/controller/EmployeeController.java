@@ -19,8 +19,8 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     @GetMapping
-    public ResponseEntity<List<EmployeeResponse>> getEmployees() {
-        return new ResponseEntity<>(employeeService.getEmployees(), HttpStatus.OK);
+    public ResponseEntity<List<EmployeeResponse>> getAllEmployees() {
+        return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatus.OK);
     }
 
     @GetMapping("/{uuid}")

@@ -1,7 +1,7 @@
 package com.ibm.employees.service;
 
+import com.ibm.employees.exception.AllEmployeesNotFoundException;
 import com.ibm.employees.exception.EmployeeNotFoundException;
-import com.ibm.employees.exception.EmployeesNotFoundException;
 import com.ibm.employees.model.EmployeeEntity;
 import com.ibm.employees.model.EmployeeRequest;
 import com.ibm.employees.model.EmployeeResponse;
@@ -20,7 +20,7 @@ public class DefaultEmployeeService implements EmployeeService {
     private final EmployeeRepository employeeRepository;
 
     @Override
-    public List<EmployeeResponse> getEmployees() {
+    public List<EmployeeResponse> getAllEmployees() {
 
         List<EmployeeResponse> employeeResponseList = employeeRepository.findAll()
                 .stream()
@@ -34,7 +34,7 @@ public class DefaultEmployeeService implements EmployeeService {
                 .toList();
 
         if (employeeResponseList.isEmpty()) {
-            throw new EmployeesNotFoundException();
+            throw new AllEmployeesNotFoundException();
         }
 
         return employeeResponseList;

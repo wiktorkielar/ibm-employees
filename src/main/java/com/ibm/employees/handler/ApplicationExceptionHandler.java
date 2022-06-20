@@ -1,7 +1,7 @@
 package com.ibm.employees.handler;
 
+import com.ibm.employees.exception.AllEmployeesNotFoundException;
 import com.ibm.employees.exception.EmployeeNotFoundException;
-import com.ibm.employees.exception.EmployeesNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,7 +16,7 @@ import java.util.Map;
 public class ApplicationExceptionHandler {
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler(value = {EmployeeNotFoundException.class, EmployeesNotFoundException.class})
+    @ExceptionHandler(value = {EmployeeNotFoundException.class, AllEmployeesNotFoundException.class})
     public Map<String, String> handleEmployeeAndEmployeesNotFoundExceptions(RuntimeException ex) {
 
         Map<String, String> fieldMessagePairs = new HashMap<>();

@@ -59,8 +59,8 @@ class EmployeeControllerTest {
 
 
     @Test
-    @DisplayName("Should serialize objects and return Http Status 200 for getEmployees.")
-    void shouldSerializeObjectsAndReturnHttpStatus200ForGetEmployees() throws Exception {
+    @DisplayName("Should serialize objects and return Http Status 200 for getAllEmployees.")
+    void shouldSerializeObjectsAndReturnHttpStatus200ForGetAllEmployees() throws Exception {
 
         //given
         String expectedResponse = "[\n" +
@@ -73,7 +73,7 @@ class EmployeeControllerTest {
                 "    }\n" +
                 "]";
 
-        when(employeeService.getEmployees()).thenReturn(List.of(employeeResponse));
+        when(employeeService.getAllEmployees()).thenReturn(List.of(employeeResponse));
 
         //when
         MvcResult mvcResult = mockMvc.perform(get(apiBasePath + "/employees")
