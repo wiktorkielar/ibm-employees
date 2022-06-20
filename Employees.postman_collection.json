@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "be4dcaeb-6fb7-443f-96b5-812e2ca7d333",
+		"name": "Employees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/61c087ff-2810-48f5-945e-bf67a9f65ccf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"61c087ff-2810-48f5-945e-bf67a9f65ccf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"jobRole\": \"Java Developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Adam\",\r\n    \"lastName\": \"Smith\",\r\n    \"jobRole\": \"Go Developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/bd115612-188f-410f-8e73-a8367d083234\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"bd115612-188f-410f-8e73-a8367d083234\""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
